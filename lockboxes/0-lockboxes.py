@@ -12,4 +12,4 @@ def canUnlockAll(boxes):
             unlocked_box += [box]
         else:
             return False
-    return True
+    return len(boxes) == len(unlocked_box)
