@@ -13,11 +13,13 @@ def canUnlockAll(boxes):
     This function will return True if all boxes can be open
     and False oteherwise.
     """
-    unlocked_box = [0]
+    unlocked_boxes = [0]
     for box in boxes:
         if len(box) == 0:
             break
+        if len(unlocked_boxes) == len(boxes):
+            return True
         for key in box:
-            unlocked_box += [key]
-    unlocked_box = sorted(list(OrderedDict.fromkeys(unlocked_box)))
-    return len(unlocked_box) == len(boxes)
+            unlocked_boxes += [key]
+    unlocked_boxes = sorted(list(OrderedDict.fromkeys(unlocked_boxes)))
+    return len(unlocked_boxes) == len(boxes)
