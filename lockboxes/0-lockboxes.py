@@ -20,5 +20,4 @@ def canUnlockAll(boxes):
         for key in box:
             unlocked_boxes += [key]
     unlocked_boxes = sorted(list(OrderedDict.fromkeys(unlocked_boxes)))
-
     return len(unlocked_boxes) == len(boxes)
