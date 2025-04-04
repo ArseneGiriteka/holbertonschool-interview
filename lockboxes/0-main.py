@@ -12,7 +12,6 @@ boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
 print(canUnlockAll(boxes))
 
 box = [key for key in range(1000)]
-boxes = []
-for _ in range(1000):
-    boxes.append(box)
+n = 1000
+boxes = [list(range(n)) for _ in range(n)]
 print(canUnlockAll(boxes))
