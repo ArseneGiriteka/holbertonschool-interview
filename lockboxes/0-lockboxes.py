@@ -6,6 +6,10 @@ Lockboxes
 
 
 def canUnlockAll(boxes):
+    """
+    This function will return True if all boxes can be open
+    and False oteherwise.
+    """
     unlocked_box = [0]
     for box in boxes:
         if len(box) == 0:
