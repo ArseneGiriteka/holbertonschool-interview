@@ -1,15 +1,17 @@
 #!/usr/bin/python3
+from collections import OrderedDict
 """
 Lockboxes
 """
 
 
 def canUnlockAll(boxes):
-    unlocked_box = []
+    unlocked_box = [0]
     for box in boxes:
-        if isinstance(box, int) and 0 <= box and box >= (len(boxes) - 1)\
-                and box not in unlocked_box:
-            unlocked_box += [box]
-        else:
-            return False
-    return len(boxes) == len(unlocked_box)
+        if len(box) == 0:
+            break
+        for key in box:
+            unlocked_box += [key]
+    unlocked_box = sorted(list(OrderedDict.fromkeys(unlocked_box)))
+    print(unlocked_box)
+    return len(unlocked_box) == len(boxes)
