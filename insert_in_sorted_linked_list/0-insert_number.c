@@ -35,6 +35,10 @@ if (current == NULL)
 {
 previous->next = new_node;
 }
+else if (current->n > number){
+    previous->next = new_node;
+    new_node->next = current;
+}
 }
 }
 return (new_node);
