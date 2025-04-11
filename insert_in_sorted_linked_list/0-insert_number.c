@@ -27,6 +27,8 @@ if (*head == NULL)
 }
 else
 {
+new_node->n = number;
+new_node->next = NULL;
 while (current->n < number)
 {
 previous = current;
@@ -35,7 +37,7 @@ if (current == NULL)
 {
 previous->next = new_node;
 }
-else if (current->n > number){
+else if (current->n >= number){
     previous->next = new_node;
     new_node->next = current;
 }
