@@ -14,7 +14,7 @@ listint_t *current;
 
 current = *head;
 previous = *head;
-printf("done");
+
 new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 {
@@ -33,7 +33,6 @@ new_node->next = current;
 }
 else
 {
-int i = 0;
 while (current != NULL)
 {
 if (current->n >= number)
@@ -44,8 +43,6 @@ return (new_node);
 }
 previous = current;
 current = current->next;
-printf(" testo %d\n", previous->n);
-i++;
 }
 }
 return (new_node);
