@@ -14,7 +14,7 @@ listint_t *current;
 
 current = *head;
 previous = *head;
-
+printf("done");
 new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 {
@@ -26,12 +26,14 @@ if (*head == NULL)
 {
 *head = new_node;
 }
-else
+else if (number <= current->n)
 {
-if (current == NULL)
-{
+new_node->next = current;
 *head = new_node;
 }
+else
+{
+int i = 0;
 while (current != NULL)
 {
 if (current->n >= number)
@@ -42,6 +44,8 @@ return (new_node);
 }
 previous = current;
 current = current->next;
+printf(" testo %d\n", previous->n);
+i++;
 }
 }
 return (new_node);
