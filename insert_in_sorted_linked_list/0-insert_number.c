@@ -29,18 +29,21 @@ else
 {
 new_node->n = number;
 new_node->next = NULL;
-while (current->n < number)
-{
-previous = current;
-current = current->next;
+
 if (current == NULL)
 {
+*head = new_node;
+}
+while (current != NULL)
+{
+if (current->n >= number)
+{
 previous->next = new_node;
+new_node->next = current;
+return (new_node);
 }
-else if (current->n >= number){
-    previous->next = new_node;
-    new_node->next = current;
-}
+previous = current;
+current = current->next;
 }
 }
 return (new_node);
