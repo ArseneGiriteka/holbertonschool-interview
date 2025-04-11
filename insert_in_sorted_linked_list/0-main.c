@@ -37,7 +37,7 @@ printf("-----------------\n");
 insert_node(&head, 0);
 print_listint(head);
 printf("-----------------\n");
-insert_node(&head, 0);
+insert_node(&head, 10000);
 print_listint(head);
 free_listint(head);
 return (0);

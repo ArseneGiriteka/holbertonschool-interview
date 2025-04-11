@@ -43,6 +43,10 @@ return (new_node);
 }
 previous = current;
 current = current->next;
+if (current == NULL)
+{
+previous->next = new_node;
+}
 }
 }
 return (new_node);
